@@ -46,10 +46,13 @@ body{
     position: relative;
     float: left;
     left: 50%;
+    width: 70%;
     transform: translateX(-50%);
 }
-.view_2022{
-
+.view_2022, .view_2021{
+    position: relative;
+    float: left;
+    width: 100%;
 }
 .y2022, .y2021{
     position: relative;
@@ -58,15 +61,30 @@ body{
     text-decoration: none;
     font-size: 1.5em;
     margin-bottom: 10px;
+    width: 100%;
+    z-index: 1;
 }
 .y2022:hover, .y2021:hover{
     text-shadow: 0 0 10px rgba(255, 183, 45, .75), 0 0 5px rgba(255, 183, 45, .5), 0 0 3px rgba(255, 183, 45, .35);
 }
-.y2022_month{
-    
+.y2022_month, .y2021_month{
+    position: relative;
+    float: right;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    transition: all .5s ease-in-out;
+}
+.y2022_month.show{
+    opacity: 1;
+    height: calc(36px*6);
+}
+.y2021_month.show{
+    opacity: 1;
+    height: calc(36px*6);
 }
 .y2022_month li, .y2021_month li{
-    margin-bottom: 18px;
+    margin-bottom: 7px;
 }
 .y2021_month li:last-child{
     margin-bottom: 0;
@@ -76,6 +94,8 @@ body{
     text-decoration: none;
     font-size: 1.125em;
     display: inline-block;
+    z-index: -1;
+    padding: 5px;
 }
 .y2022_month li a:hover, .y2021_month li a:hover{
     font-weight: 700;
@@ -84,14 +104,8 @@ body{
 .y2022_month li a:hover:before, .y2021_month li a:hover:before{
     content: '▶ '
 }
-.view_2021{
-
-}
 .y2021{
     
-}
-.y2021_month{
-
 }
 .body_wrap{
     position: relative;
@@ -244,6 +258,7 @@ header{
     left: 0;
     margin-top: 10px;
     color: #005C0F;
+    font-weight: 700;
     font-family: 'Gowun Batang', serif;
     font-size: 0.75em;
 }
@@ -270,10 +285,10 @@ header{
     float: left;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
     width: 96%;
+/*     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
     background-color: yellow;
 }
 .flip {
@@ -282,12 +297,17 @@ header{
     width: 310px;
     height: 150px;
     perspective: 1100px;
+    margin-right: 67.8px;
+    margin-bottom: 20px;
+}
+.flip:nth-child(3n){
+    margin-right: 0;
 }
 .card {
     position: relative;
     width: 100%; 
     height: 100%; 
-    transition: .5s;
+    transition: .4s all ease-in-out;
     transform-style: preserve-3d;
 } 
 .flip:hover .card{
@@ -336,7 +356,7 @@ header{
     margin-top: 15px;
     line-height: 1.1875em;
 }
-.visitor{
+.visitor, .owner{
     position: absolute;
     bottom: 15px;
     margin-left: 20px;
