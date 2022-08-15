@@ -210,6 +210,7 @@ header{
     margin-top: 15px;
     font-family: 'Poor Story', cursive;
     font-size: 1em;
+/*     font-weight: bold; */
     color: #005C0F;
 }
 .speech_bubble_left{
@@ -283,6 +284,7 @@ header{
     font-family: 'Gowun Batang', serif;
     color: #005C0F;
     font-size: 0.75em;
+    font-weight: 700;
     margin-bottom: 15px;
 }
 .message_wrap{

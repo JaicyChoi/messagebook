@@ -7,6 +7,13 @@ const y2021_month = document.querySelector('.y2021_month');
 const y2022_month_li = document.querySelectorAll('.y2022_month>li');
 const y2021_month_li = document.querySelectorAll('.y2021_month>li');
 const message_wrap = document.querySelector('.message_wrap');
+const content = document.querySelector('.content');
+const button = document.querySelector('button');
+const header = document.querySelector('header');
+
+button.addEventListener('click', () => {
+    header.scrollIntoView({behavior:'smooth'});
+});
 
 //search index of month, year
 let year = null;
@@ -150,10 +157,4 @@ view_2021.addEventListener('mouseleave', () => {
         y2021_month.classList.remove('show');
         y2022_month.classList.add('show');
     }
-});
-
-const button = document.querySelector('button');
-const header = document.querySelector('header');
-button.addEventListener('click', () => {
-    header.scrollIntoView({behavior:'smooth'});
 });
