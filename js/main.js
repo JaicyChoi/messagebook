@@ -151,3 +151,9 @@ view_2021.addEventListener('mouseleave', () => {
         y2022_month.classList.add('show');
     }
 });
+
+const button = document.querySelector('button');
+const header = document.querySelector('header');
+button.addEventListener('click', () => {
+    header.scrollIntoView({behavior:'smooth'});
+});
