@@ -97,15 +97,12 @@ body{
     z-index: -1;
     padding: 5px;
 }
-.y2022_month li a:hover, .y2021_month li a:hover{
+.y2022_month li a:hover, .y2021_month li a:hover, .y2022_month li a.show, .y2021_month li a.show{
     font-weight: 700;
     text-shadow: 0 0 10px rgba(255, 219, 149, .75), 0 0 5px rgba(255, 219, 149, .5);
 }
 .y2022_month li a:hover:before, .y2021_month li a:hover:before{
     content: '▶ '
-}
-.y2021{
-    
 }
 .body_wrap{
     position: relative;
@@ -114,7 +111,7 @@ body{
     width: 1100px;
     left: calc(50px + 50%);
     transform: translateX(-50%);
-    background-color: skyblue;
+/*     background-color: skyblue; */
 }
 header{
     position: relative;
@@ -195,7 +192,7 @@ header{
 .profile_img_wrap img{
     position: relatvie;
     float: left;
-    margin: 10px 0  0 -35px;
+    margin: 10px 0  0 -32px;
     width: 145%;
     display: block;
 }
@@ -214,6 +211,7 @@ header{
     float: left;
     width: 345px;
     margin: 190px 0 0 70px;
+    animation: left_bubble 1.3s ease-in-out infinite;
 }
 .speech_bubble_left img{
     width: 100%;
@@ -235,6 +233,7 @@ header{
     position: absolute;
     width: 176px;
     margin: 200px 0 0 675px;
+    animation: right_bubble 1s ease-in-out infinite;
 }
 .speech_bubble_right img{
     width: 100%;
@@ -266,8 +265,8 @@ header{
     position: relative;
     float: right;
     width: 1110px;
-    margin: 50px 0 100px 0;
-    background-color: pink;
+    margin: 70px 0 100px 0;
+/*     background-color: pink; */
 }
 .tip{
     position: relative;
@@ -289,7 +288,7 @@ header{
 /*     display: flex;
     flex-direction: row;
     justify-content: space-between; */
-    background-color: yellow;
+/*     background-color: yellow; */
 }
 .flip {
     position: relative;
@@ -367,4 +366,21 @@ header{
     bottom: 15px;
     right: 20px;
     font-size: 0.75em;
+}
+.go_top{
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    opacity: .75;
+    transition: .3s ease;
+}
+.go_top img{
+    width: 100%;
+    display: block;
+}
+.go_top:hover{
+    opacity: 1;
 }
