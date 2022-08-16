@@ -360,10 +360,23 @@ header{
     backface-visibility: hidden;
 }
 .message_card_wrap_front{
+    background-size: 500%;
     background-color: #FFF7EC;
     border-radius: 15px;
     border: solid 2px #6B4000;
     box-sizing: border-box;
+}
+.message_card_wrap_front::after{
+    content: '';
+    background: url(../images/parchment_texture.jpg) 0 70%;
+    background-size: 100%;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;   
 }
 .message_card_wrap_back{
     background-color: #F3D8AF;
@@ -371,6 +384,18 @@ header{
     border: solid 2px #6B4000;
     transform: rotateY(180deg);
     box-sizing: border-box;
+}
+.message_card_wrap_back::after{
+    content: '';
+    background: url(../images/parchment_texture.jpg) 0 100%;
+    background-size: 100%;
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;   
 }
 .message_card{
     position: relative;
@@ -386,6 +411,7 @@ header{
     border-style: dashed;
     font-family: 'Noto Sans KR', sans-serif;
     color: #583400;
+    z-index: 1;
 }
 .message{
     position: absolute;
