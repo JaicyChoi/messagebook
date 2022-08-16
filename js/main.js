@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const view_2022 = document.querySelector('.view_2022');
 const view_2021 = document.querySelector('.view_2021');
 const y2022 = document.querySelector('.y2022');
@@ -10,6 +11,9 @@ const message_wrap = document.querySelector('.message_wrap');
 const content = document.querySelector('.content');
 const button = document.querySelector('button');
 const header = document.querySelector('header');
+const mobile_menu = document.querySelector('.mobile_menu');
+const set_timeline = document.querySelector('.set_timeline');
+const set_timeline_bg = document.querySelector('.set_timeline_bg');
 
 button.addEventListener('click', () => {
     header.scrollIntoView({behavior:'smooth'});
@@ -28,6 +32,9 @@ y2022_month_li.forEach((li, index) => {
         message_wrap.innerHTML = '';
         show_messages(year, index);
         show_timeline(year, index);
+        set_timeline.classList.remove('show');
+        set_timeline_bg.classList.remove('show');
+        body.classList.remove('srolllock');
     }
 });
 //show 2021 year messages
@@ -37,6 +44,9 @@ y2021_month_li.forEach((li, index) => {
         message_wrap.innerHTML = '';
         show_messages(year, index);
         show_timeline(year, index);
+        set_timeline.classList.remove('show');
+        set_timeline_bg.classList.remove('show');
+        body.classList.remove('srolllock');
     }
 });
 
@@ -157,4 +167,11 @@ view_2021.addEventListener('mouseleave', () => {
         y2021_month.classList.remove('show');
         y2022_month.classList.add('show');
     }
+});
+
+//mobile menu controll
+mobile_menu.addEventListener('click', () => {
+    body.classList.add('srolllock');
+    set_timeline_bg.classList.add('show');
+    set_timeline.classList.add('show');
 });

@@ -11,7 +11,11 @@ body{
     background-size: 650px;
     background-repeat: repeat;
     background-color: #FFEDD2;
+    min-width: 480px;
     cursor: url(../images/icon/cursor_normal.png), auto;
+}
+body.srolllock{
+    overflow: hidden;
 }
 .hidden{
     width: 1px;
@@ -23,6 +27,14 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
+.mobile_menu{
+    display: none;
+    cursor: url(../images/icon/cursor_pointer.png), auto;
+}
+.mobile_menu img{
+    width: 100%;
+    display: block;
+}
 .set_timeline{
     position: fixed;
     float: left;
@@ -30,6 +42,27 @@ body::-webkit-scrollbar{
     left: 50%;
     transform: translatex(-50%);
     height: 100%;
+}
+.set_timeline.show{
+    opacity: 1;
+    z-index: 2;
+    transform: translatex(-50%);
+}
+.set_timeline_bg{
+    position: fixed;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    z-index: -1;
+}
+.set_timeline_bg.show{
+    animation: bg_animation .5s linear;
+    z-index: 1;
+    opacity: 1;
+/*     opacity: 1;
+    z-index: 1; */
 }
 .timeline_wrap{
     position: fxied;
@@ -115,7 +148,7 @@ body::-webkit-scrollbar{
     float: left;
     top: 0;
     width: 1100px;
-    left: calc(50px + 50%);
+    left: calc(40px + 50%);
     transform: translateX(-50%);
 /*     background-color: skyblue; */
 }
@@ -125,7 +158,7 @@ header{
     width: 1100px;
 }
 .header_bg_img_wrap{
-    position: relative;
+    position: absolute;
     float: left;
     width: 100%;
 }
@@ -143,7 +176,6 @@ header{
 }
 .header_info_wrap{
     position: relative;
-    margin-top: -345px;
     float: left;
     width: 100%;
 }
@@ -261,7 +293,7 @@ header{
 }
 .address{
     position: absolute;
-    left: 0;
+    margin-left: 10px;
     margin-top: 10px;
     color: #005C0F;
     font-weight: 700;
@@ -271,7 +303,7 @@ header{
 .content{
     position: relative;
     float: right;
-    width: 1110px;
+    width: 100%;
     margin: 70px 0 100px 0;
 /*     background-color: pink; */
 }
@@ -304,7 +336,7 @@ header{
     width: 310px;
     height: 150px;
     perspective: 1100px;
-    margin-right: 67.8px;
+    margin-right: 63px;
     margin-bottom: 20px;
     cursor: url(../images/icon/cursor_speech_bubble.png), auto;
 }

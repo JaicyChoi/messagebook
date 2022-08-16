@@ -1,3 +1,11 @@
+@keyframes bg_animation{
+    0%{
+       opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes left_bubble{
     0%, 100%{
         transform: translateY(5px);
