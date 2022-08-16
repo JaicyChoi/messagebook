@@ -170,7 +170,7 @@
     }
 }
 @media screen and (max-width:768px){
-     body{
+    body{
         background-size: 580px;
     }
     .timeline{
@@ -369,5 +369,69 @@
     .message_card{
         width: 331px;
         height: 147px;
+    }
+}
+@media screen and (max-width:440px){
+    .message_wrap{
+        padding-left: 70px;
+    }
+    .speech_bubble_right{
+        width: 140px;
+        margin: 147px 0 0 280px;
+    }
+}
+@media screen and (max-width:400px){
+    body{
+        background-size: 500px;
+    }
+    .speech_bubble_right{
+        width: 140px;
+        margin: 145px 0 0 250px;
+    }
+    .flip{
+        width: 320px;
+        height: 160px;
+    }
+    .message_card{
+        width: 305px;
+        height: 147px;
+    }
+}
+@media screen and (max-width:370px){
+    .logo{
+        margin: 80px 0 20px 0;
+    }
+    .logo a{
+        font-size: 2.7em;
+    }
+    .mobile_menu{
+        width: 40px;
+    }
+    .profile_wrap{
+        width: 185px;
+    }
+    .profile_img_wrap_dash_border{
+        height: 185px;
+    }
+    .speech_bubble_right{
+        width: 130px;
+        margin: 147px 0 0 230px;
+    }
+    .speech_bubble_right_text{
+        top: 20px;
+        margin-left: 2px;
+        font-size: 0.75em;
+        width: 70px;
+    }
+    .flip{
+        width: 310px;
+        height: 150px;
+    }
+    .message_card{
+        width: 295px;
+        height: 137px;
+    }
+    .message_wrap{
+        padding-left: 40px;
     }
 }

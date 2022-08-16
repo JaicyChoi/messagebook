@@ -11,7 +11,7 @@ body{
     background-size: 650px;
     background-repeat: repeat;
     background-color: #FFEDD2;
-    min-width: 480px;
+    min-width: 360px;
     cursor: url(../images/icon/cursor_normal.png), auto;
 }
 body.srolllock{
