@@ -33,9 +33,7 @@ y2022_month_li.forEach((li, index) => {
         message_wrap.innerHTML = '';
         show_messages(year, index);
         show_timeline(year, index);
-        set_timeline.classList.remove('show');
-        set_timeline_bg.classList.remove('show');
-        body.classList.remove('srolllock');
+        remove_timeline();
     }
 });
 //show 2021 year messages
@@ -45,9 +43,7 @@ y2021_month_li.forEach((li, index) => {
         message_wrap.innerHTML = '';
         show_messages(year, index);
         show_timeline(year, index);
-        set_timeline.classList.remove('show');
-        set_timeline_bg.classList.remove('show');
-        body.classList.remove('srolllock');
+        remove_timeline();
     }
 });
 
@@ -158,6 +154,12 @@ function show_messages(year, index){
     }
 }
 
+function remove_timeline(){
+    set_timeline.classList.remove('show');
+    set_timeline_bg.classList.remove('show');
+    body.classList.remove('srolllock');
+}
+
 //timeline menu action
 y2022.addEventListener('mouseenter', () => {
     if( year === '2021' )
@@ -203,8 +205,6 @@ window.addEventListener('scroll', () => {
 
 close_btn_wrap.addEventListener('click', () => {
     if( window.innerWidth <= 480 ){
-        set_timeline.classList.remove('show');
-        set_timeline_bg.classList.remove('show');
-        body.classList.remove('srolllock');
+        remove_timeline();
     }
 });
