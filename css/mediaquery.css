@@ -201,6 +201,10 @@
         font-size: 0.8em;
         width: 75px;
     }
+    .show_how{
+        font-size: .87em;
+        margin: -10px 0 15px 15px;
+    }
     .message_wrap{
         grid-template-columns: repeat(2, 1fr);
         padding-left: 45px;
@@ -269,6 +273,9 @@
         width: 150px;
         margin: 145px 0 0 310px;
     }
+    .show_how{
+        margin: -5px 0 15px 15px;
+    }
     .message_wrap{
         padding-left: 145px;
     }
@@ -280,6 +287,9 @@
     }
     .content{
         margin: 60px 0 70px 0;
+    }
+    .show_how{
+        margin: 0px 0 15px 15px;
     }
     .message_wrap{
         padding-left: 100px;
@@ -319,6 +329,9 @@
     .address{
         position: absolute;
         right: 10px;
+    }
+    .show_how{
+        margin: 3px 0 15px 15px;
     }
     .set_timeline{
         position: fixed;
@@ -384,6 +397,9 @@
         width: 140px;
         margin: 145px 0 0 250px;
     }
+    .show_how{
+        margin: 5px 0 15px 15px;
+    }
     .flip{
         width: 320px;
         height: 160px;
@@ -424,6 +440,10 @@
         margin-left: 2px;
         font-size: 0.75em;
         width: 70px;
+    }
+    .show_how{
+        font-size: .85em;
+        margin: 10px 0 13px 15px;
     }
     .flip{
         width: 310px;
