@@ -12,6 +12,7 @@ const content = document.querySelector('.content');
 const button = document.querySelector('button');
 const header = document.querySelector('header');
 const mobile_menu = document.querySelector('.mobile_menu');
+const close_btn_wrap = document.querySelector('.close_btn_wrap');
 const set_timeline = document.querySelector('.set_timeline');
 const set_timeline_bg = document.querySelector('.set_timeline_bg');
 
@@ -95,6 +96,21 @@ function show_messages(year, index){
         let date_back = document.createElement('p');
     
         flip.classList.add('flip');
+
+        delay_sec = i + '';
+        if( i < 10 )
+            flip.style.animationDelay = '0.' + i + 's';
+        else if( i >= 10 && i < 20 )
+            flip.style.animationDelay = '1.' + delay_sec.slice(1,2) + 's';
+        else if( i >= 20 && i < 30 )
+            flip.style.animationDelay = '2.' + delay_sec.slice(1,2) + 's';
+        else if( i >= 30 && i < 40 )
+            flip.style.animationDelay = '3.' + delay_sec.slice(1,2) + 's';
+        else if( i >= 40 && i < 50 )
+            flip.style.animationDelay = '4.' + delay_sec.slice(1,2) + 's';
+        else if( i >= 50 && i < 60 )
+            flip.style.animationDelay = '5.' + delay_sec.slice(1,2) + 's';
+
         card.classList.add('card');
         message_card_wrap_front.classList.add('message_card_wrap_front');
         message_card_front.classList.add('message_card');
@@ -174,4 +190,21 @@ mobile_menu.addEventListener('click', () => {
     body.classList.add('srolllock');
     set_timeline_bg.classList.add('show');
     set_timeline.classList.add('show');
+});
+
+window.addEventListener('scroll', () => {
+    let scroll_height = window.pageYOffset;
+
+    if( scroll_height >= 400 )
+        mobile_menu.classList.add('show_bg');
+    else if( scroll_height < 400 )
+        mobile_menu.classList.remove('show_bg');
+});
+
+close_btn_wrap.addEventListener('click', () => {
+    if( window.innerWidth <= 480 ){
+        set_timeline.classList.remove('show');
+        set_timeline_bg.classList.remove('show');
+        body.classList.remove('srolllock');
+    }
 });

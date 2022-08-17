@@ -310,14 +310,10 @@
         transform: translateX(-50%);
     }
     .mobile_menu{
-        position: fixed;
-        width: 45px;
-        margin: 10px 0 0 10px;
         display: block;
         z-index: 1;
     }
-    .mobile_menu img{
-        width: 100%;
+    .close_btn_wrap{
         display: block;
     }
     .address{
