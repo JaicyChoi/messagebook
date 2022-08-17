@@ -185,7 +185,7 @@
     .profile_wrap{
         width: 200px;
     }
-    .profile_img_wrap_dash_border{
+    .profile_img_wrap_dash_border_front{
         height: 200px;
     }
     .nickname{
@@ -406,7 +406,7 @@
     .profile_wrap{
         width: 185px;
     }
-    .profile_img_wrap_dash_border{
+    .profile_img_wrap_dash_border_front{
         height: 185px;
     }
     .speech_bubble_right{
