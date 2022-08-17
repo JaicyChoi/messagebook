@@ -154,7 +154,7 @@ body::-webkit-scrollbar{
     text-shadow: 0 0 10px rgba(255, 219, 149, .75), 0 0 5px rgba(255, 219, 149, .5);
 }
 .y2022_month li a:hover:before, .y2021_month li a:hover:before{
-    content: '▶ '
+    content: 'â–¶ '
 }
 .close_btn_wrap{
     position: absolute;
@@ -221,6 +221,7 @@ header{
     color: #005C0F;
     font-weight: bold;
     text-decoration: none;
+    cursor: url(../images/icon/cursor_pointer.png), auto;
 }
 .profile_wrap{
     position: relative;
