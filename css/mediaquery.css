@@ -189,7 +189,7 @@
         height: 200px;
     }
     .nickname{
-        margin-top: 12px;
+        bottom: -20px;
     }
     .speech_bubble_right{
         width: 160px;
@@ -403,11 +403,17 @@
     .mobile_menu{
         width: 40px;
     }
+    .header_info_wrap{
+        margin-bottom: 7px;
+    }
     .profile_wrap{
         width: 185px;
     }
     .profile_img_wrap_dash_border_front{
         height: 185px;
+    }
+    .nickname{
+        bottom: -5px;
     }
     .speech_bubble_right{
         width: 130px;
