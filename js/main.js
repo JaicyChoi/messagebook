@@ -28,27 +28,30 @@ let BACKUP_owner = null;
 
 //show 2022 year messages
 y2022_month_li.forEach((li, index) => {
-    li.onclick = () => {
-        year = li.parentNode.previousSibling.previousSibling.innerHTML;
-        message_wrap.innerHTML = '';
+    li.addEventListener('click', () => {
+        set_year(li);
         show_messages(year, index);
         show_timeline(year, index);
         remove_timeline();
-    }
+    });
 });
 //show 2021 year messages
 y2021_month_li.forEach((li, index) => {
-    li.onclick = () => {
-        year = li.parentNode.previousSibling.previousSibling.innerHTML;
-        message_wrap.innerHTML = '';
+    li.addEventListener('click', () => {
+        set_year(li);
         show_messages(year, index);
         show_timeline(year, index);
         remove_timeline();
-    }
+    });
 });
 
+function set_year(li){
+    year = li.parentNode.previousSibling.previousSibling.innerHTML;
+    message_wrap.innerHTML = '';
+}
+
 //show latest month messages
-year = '2022';
+year = '2022';//current year
 index = 0;
 show_messages(year, index);
 show_timeline(year, index);
