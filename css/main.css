@@ -154,7 +154,7 @@ body::-webkit-scrollbar{
     text-shadow: 0 0 10px rgba(255, 219, 149, .75), 0 0 5px rgba(255, 219, 149, .5);
 }
 .y2022_month li a:hover:before, .y2021_month li a:hover:before{
-    content: '▶ '
+    content: 'â–¶ '
 }
 .close_btn_wrap{
     position: absolute;
@@ -288,7 +288,7 @@ header{
 .profile_img_wrap_dash_border_back img{
     position: relatvie;
     float: left;
-    margin: -21px 0px 0 -27px;
+    margin: -21px 0px 0 -29px;
     width: 130%;
     display: block;
 }
