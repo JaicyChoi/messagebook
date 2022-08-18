@@ -193,6 +193,10 @@ function create_message_card(index, i, BACKUP_visitor_cnt){
         message_back.innerHTML = '등록된 답변이 없습니다.';
         owner.innerHTML = '';
     }
+    else if( BACKUP_owner[index][i].message === '답변 대기 중...' ){
+        message_back.innerHTML = '답변 대기 중...';
+        owner.innerHTML = '';
+    }
     else{
         message_back.innerHTML = '⭐ '+ BACKUP_owner[index][i].message;
         owner.innerHTML = '그라하티아';
