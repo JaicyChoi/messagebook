@@ -1,7 +1,7 @@
 let Y2022_visitor = [
     [//8
         {
-            message: 'https://url.kr/tml8xr / https://url.kr/zabad9 잠수타셨을때... 찍은거 uu.. ↕️오늘도 좋은 하루 보내세요.↕️!!',
+            message: 'https://url.kr/tml8xr / https://url.kr/zabnd9 잠수타셨을때... 찍은거 uu.. ↕️오늘도 좋은 하루 보내세요.↕️!!',
             visitor: '너는',
             date: '2022/8/21 23:40'
         },
