@@ -17,6 +17,8 @@ const set_timeline = document.querySelector('.set_timeline');
 const set_timeline_bg = document.querySelector('.set_timeline_bg');
 const latest = document.querySelector('.latest');
 const oldest = document.querySelector('.oldest');
+const address = document.querySelector('.address')
+const view_map = document.querySelector('.view_map');
 
 button.addEventListener('click', () => {
     header.scrollIntoView({behavior:'smooth'});
@@ -275,4 +277,14 @@ close_btn_wrap.addEventListener('click', () => {
     if( window.innerWidth <= 480 ){
         remove_timeline();
     }
+});
+
+//view map controll
+address.addEventListener('click', () => {
+    body.classList.add('srolllock')
+    view_map.classList.add('show');
+});
+view_map.addEventListener('click', () => {
+    body.classList.remove('srolllock')
+    view_map.classList.remove('show');
 });

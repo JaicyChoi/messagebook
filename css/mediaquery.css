@@ -153,6 +153,9 @@
         width: 297px;
         height: 138px;
     }
+    .map_wrapper{
+        width: 80%;
+    }
 }
 @media screen and (max-width:800px){
     .speech_bubble_right{
@@ -378,6 +381,9 @@
     .message_card{
         width: 331px;
         height: 147px;
+    }
+     .map_wrapper{
+        width: 85%;
     }
 }
 @media screen and (max-width:440px){

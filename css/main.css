@@ -16,6 +16,7 @@ body{
 }
 body.srolllock{
     overflow: hidden;
+    height: 100vh;
 }
 .hidden{
     width: 1px;
@@ -154,7 +155,7 @@ body::-webkit-scrollbar{
     text-shadow: 0 0 10px rgba(255, 219, 149, .75), 0 0 5px rgba(255, 219, 149, .5);
 }
 .y2022_month li a:hover:before, .y2021_month li a:hover:before{
-    content: '▶ '
+    content: 'â–¶ '
 }
 .close_btn_wrap{
     position: absolute;
@@ -357,6 +358,18 @@ header{
     font-weight: 700;
     font-family: 'Gowun Batang', serif;
     font-size: 0.75em;
+    cursor: url(../images/icon/cursor_pointer.png), auto;
+}
+.map_img_wrap{
+    position: relative;
+    float: right;
+    margin-left: 3px;
+    width: 12px;
+/*     background: red; */
+}
+.map_img_wrap img{
+    display: block;
+    width: 100%;
 }
 .content{
     position: relative;
@@ -534,6 +547,31 @@ header{
     bottom: 15px;
     right: 20px;
     font-size: 0.75em;
+}
+.view_map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    transition: all .3s ease-in-out;
+}
+.view_map.show{
+    display: block;
+}
+.map_wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    max-width: 1000px;
+}
+.map_wrapper img{
+    display: block;
+    width: 100%;
 }
 .go_top{
     position:fixed;
