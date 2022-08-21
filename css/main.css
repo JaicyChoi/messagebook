@@ -166,7 +166,7 @@ body::-webkit-scrollbar{
     text-shadow: 0 0 10px rgba(255, 219, 149, .75), 0 0 5px rgba(255, 219, 149, .5);
 }
 .y2022_month li a:hover:before, .y2021_month li a:hover:before{
-    content: 'â–¶ '
+    content: '▶ '
 }
 .close_btn_wrap{
     position: absolute;
