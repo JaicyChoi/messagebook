@@ -43,6 +43,7 @@ body::-webkit-scrollbar{
     height: 65px;
     transform: translateY(-65px);
     transition: all .35s ease-in-out;
+    display: none;
 }
 .menu_icon_wrapper_bg.show{
     transform: translateY(0);

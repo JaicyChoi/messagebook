@@ -322,6 +322,9 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    .menu_icon_wrapper_bg{
+        display: block;
+    }
     .mobile_menu{
         display: block;
         z-index: 1;
