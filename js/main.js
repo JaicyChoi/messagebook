@@ -12,6 +12,7 @@ const content = document.querySelector('.content');
 const button = document.querySelector('button');
 const header = document.querySelector('header');
 const mobile_menu = document.querySelector('.mobile_menu');
+const menu_icon_wrapper_bg = document.querySelector('.menu_icon_wrapper_bg');
 const close_btn_wrap = document.querySelector('.close_btn_wrap');
 const set_timeline = document.querySelector('.set_timeline');
 const set_timeline_bg = document.querySelector('.set_timeline_bg');
@@ -267,10 +268,10 @@ mobile_menu.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     let scroll_height = window.pageYOffset;
 
-    if( scroll_height >= 400 )
-        mobile_menu.classList.add('show_bg');
-    else if( scroll_height < 400 )
-        mobile_menu.classList.remove('show_bg');
+    if( scroll_height >= 65 )
+        menu_icon_wrapper_bg.classList.add('show');
+    else if( scroll_height < 65 )
+        menu_icon_wrapper_bg.classList.remove('show');
 });
 
 close_btn_wrap.addEventListener('click', () => {
