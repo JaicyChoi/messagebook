@@ -117,6 +117,9 @@ body::-webkit-scrollbar{
     float: left;
     width: 100%;
 }
+.view_2022{
+    margin-bottom: 30px;
+}
 .y2022, .y2021{
     position: relative;
     float: left;
