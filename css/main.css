@@ -117,9 +117,6 @@ body::-webkit-scrollbar{
     float: left;
     width: 100%;
 }
-.view_2022{
-    margin-bottom: 30px;
-}
 .y2022, .y2021{
     position: relative;
     float: left;
@@ -144,11 +141,11 @@ body::-webkit-scrollbar{
 }
 .y2022_month.show{
     opacity: 1;
-    height: calc(36px*6);
+    height: calc(36px*7);
 }
 .y2021_month.show{
     opacity: 1;
-    height: calc(36px*6);
+    height: calc(36px*7);
 }
 .y2022_month li, .y2021_month li{
     margin-bottom: 7px;
