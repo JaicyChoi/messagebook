@@ -1,10 +1,14 @@
 const body = document.querySelector('body');
+const view_2023 = document.querySelector('.view_2023');
 const view_2022 = document.querySelector('.view_2022');
 const view_2021 = document.querySelector('.view_2021');
+const y2023 = document.querySelector('.y2023');
 const y2022 = document.querySelector('.y2022');
 const y2021 = document.querySelector('.y2021');
+const y2023_month = document.querySelector('.y2023_month');
 const y2022_month = document.querySelector('.y2022_month');
 const y2021_month = document.querySelector('.y2021_month');
+const y2023_month_li = document.querySelectorAll('.y2023_month>li');
 const y2022_month_li = document.querySelectorAll('.y2022_month>li');
 const y2021_month_li = document.querySelectorAll('.y2021_month>li');
 const message_wrap = document.querySelector('.message_wrap');
@@ -26,29 +30,23 @@ button.addEventListener('click', () => {
 });
 
 //search index of month, year
-let current_year = '2022';
+let current_year = '2023';
 let current_list = 'latest';
-let current_month = '12';
+let current_month = '1';
 let current_index = null;
 let year = null;
 let BACKUP_visitor = null;
 let BACKUP_owner = null;
 let BACKUP_visitor_cnt = 0;
 
+//show 2023 year messages
+y2023_month_li.forEach((li, index) => click_message(li,index));
 //show 2022 year messages
-y2022_month_li.forEach((li, index) => {
-    li.addEventListener('click', () => {
-        if( li.children[0].innerHTML === current_month ) return;
-        header.scrollIntoView({behavior:'smooth'});
-        set_year(li);
-        show_messages(year, index);
-        show_timeline(year, index);
-        remove_timeline();
-        current_month = li.children[0].innerHTML;
-    });
-});
+y2022_month_li.forEach((li, index) => click_message(li,index));
 //show 2021 year messages
-y2021_month_li.forEach((li, index) => {
+y2021_month_li.forEach((li, index) => click_message(li,index));
+
+function click_message(li, index){
     li.addEventListener('click', () => {
         if( li.children[0].innerHTML === current_month ) return;
         header.scrollIntoView({behavior:'smooth'});
@@ -58,7 +56,7 @@ y2021_month_li.forEach((li, index) => {
         remove_timeline();
         current_month = li.children[0].innerHTML;
     });
-});
+}
 
 function set_year(li){
     year = li.parentNode.previousSibling.previousSibling.innerHTML;
@@ -92,9 +90,14 @@ show_timeline(year, current_index);
 latest.classList.add('show');
 
 function show_timeline(year, index){
+    y2023_month_li.forEach( li => { li.children[0].classList.remove('show')});
     y2022_month_li.forEach( li => { li.children[0].classList.remove('show')});
     y2021_month_li.forEach( li => { li.children[0].classList.remove('show')});
-    if( year === '2022' ){
+    if( year === '2023' ){
+        y2023_month.classList.add('show');
+        y2023_month_li[index].children[0].classList.add('show');
+    }
+    else if( year === '2022' ){
         y2022_month.classList.add('show');
         y2022_month_li[index].children[0].classList.add('show');
     }
@@ -105,7 +108,11 @@ function show_timeline(year, index){
 }
 
 function show_messages(year, index){
-    if( year === '2022' ){
+    if( year === '2023' ){
+        BACKUP_visitor = Y2023_visitor;
+        BACKUP_owner = Y2023_owner;
+    }
+    else if( year === '2022' ){
         BACKUP_visitor = Y2022_visitor;
         BACKUP_owner = Y2022_owner;
     }
@@ -232,29 +239,77 @@ function remove_timeline(){
 }
 
 //timeline menu action
+y2023.addEventListener('mouseenter', () => {
+    if( year === '2022' )
+        y2023_month.classList.remove('show');
+    else if( year === '2021' )
+        y2021_month.classList.remove('show');
+
+    y2023_month.classList.add('show');
+});
 y2022.addEventListener('mouseenter', () => {
-    if( year === '2021' )
+    if( year === '2023' )
+        y2023_month.classList.remove('show');
+    else if( year === '2021' )
         y2021_month.classList.remove('show');
 
     y2022_month.classList.add('show');
 });
 y2021.addEventListener('mouseenter', () => {
-    if( year === '2022' )
+    if( year === '2023' )
+        y2023_month.classList.remove('show');
+    else if( year === '2022' )
         y2022_month.classList.remove('show');
 
     y2021_month.classList.add('show');
 });
 
-view_2022.addEventListener('mouseleave', () => {
+view_2023.addEventListener('mouseleave', () => {
+    y2023_month.classList.add('show');
+    y2022_month.classList.remove('show');
+    y2021_month.classList.remove('show');
+
     if( year === '2021' ){
+        y2023_month.classList.remove('show');
         y2022_month.classList.remove('show');
         y2021_month.classList.add('show');
     }
+    else if( year === '2022' ){
+        y2023_month.classList.remove('show');
+        y2022_month.classList.add('show');
+        y2021_month.classList.remove('show');
+    }
+});
+view_2022.addEventListener('mouseleave', () => {
+    y2023_month.classList.remove('show');
+    y2022_month.classList.add('show');
+    y2021_month.classList.remove('show');
+
+    if( year === '2021' ){
+        y2023_month.classList.remove('show');
+        y2022_month.classList.remove('show');
+        y2021_month.classList.add('show');
+    }
+    else if( year === '2023' ){
+        y2023_month.classList.add('show');
+        y2022_month.classList.remove('show');
+        y2021_month.classList.remove('show');
+    }  
 });
 view_2021.addEventListener('mouseleave', () => {
-    if( year === '2022' ){
+    y2023_month.classList.remove('show');
+    y2022_month.classList.remove('show');
+    y2021_month.classList.add('show');
+
+    if( year === '2023' ){
+        y2021_month.classList.remove('show');
+        y2022_month.classList.remove('show');
+        y2023_month.classList.add('show');
+    }
+    else if( year === '2022' ){
         y2021_month.classList.remove('show');
         y2022_month.classList.add('show');
+        y2023_month.classList.remove('show');
     }
 });
 
