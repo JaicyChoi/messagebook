@@ -1,0 +1,474 @@
+@media screen and (max-width:1199px){
+    .set_timeline{
+        width: 100%;
+    }
+    .body_wrap{
+        width: calc(100% - 90px);
+        overflow: hidden;
+        left: calc(45px + 50%);
+        transform: translateX(-50%);
+    }
+    header{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+    }
+    .message_wrap{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+/*         background-color: yellow; */
+    }
+    .flip{
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:1110px){
+    .speech_bubble_left{
+        width: 300px;
+        margin: 190px 0 0 70px;
+    }
+    .speech_bubble_left_text{
+        top: 62px;
+    }
+    .speech_bubble_right{
+        width: 170px;
+        margin: 200px 0 0 635px;
+    }
+    .speech_bubble_right_text{
+        margin-left: 2px;
+    }
+}
+@media screen and (max-width:1100px){
+    .message_wrap{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .flip{
+        width: 270px;
+        height: 165px;
+    }
+    .message_card{
+        width: 257px;
+        height: 152px;
+    }
+}
+@media screen and (max-width:1060px){
+    .speech_bubble_left{
+        width: 280px;
+        margin: 210px 0 0 60px;
+    }
+    .speech_bubble_left_text{
+        top: 58px;
+    }
+    .speech_bubble_right{
+        width: 170px;
+        margin: 210px 0 0 580px;
+    }
+}
+@media screen and (max-width:960px){
+    .timeline{
+        margin-top: 360px;
+    }
+    .speech_bubble_left{
+        width: 260px;
+        margin: 205px 0 0 40px;
+    }
+    .speech_bubble_left_text{
+        top: 53px;
+        font-size: 0.8em;
+        width: 140px;
+    }
+    .speech_bubble_right{
+        width: 170px;
+        margin: 200px 0 0 545px;
+    }
+    .speech_bubble_right_text{
+        top: 31px;
+        margin-left: 2px;
+        font-size: 0.8em;
+        width: 75px;
+    }
+    .logo{
+        margin: 85px 0 30px 0;
+    }
+    .message_wrap{
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 60px;
+    }
+    .flip{
+        width: 320px;
+        height: 160px;
+    }
+    .message_card{
+        width: 308px;
+        height: 150px;
+    }
+}
+@media screen and (max-width:860px){
+    body{
+        width: 100wv;
+        background-size: 600px;
+    }
+    .timeline{
+        margin-top: 350px;
+    }
+    .star_wrap{
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+    .star_wrap:nth-child(2){
+        display: none;
+    }
+    .speech_bubble_left{
+        display: none;
+    }
+    .speech_bubble_right{
+        width: 170px;
+        margin: 170px 0 0 480px;
+    }
+    .speech_bubble_right_text{
+        top: 31px;
+        margin-left: 2px;
+        font-size: 0.8em;
+        width: 75px;
+    }
+    .logo{
+        margin: 85px 0 30px 0;
+    }
+    .content{
+        margin: 70px 0 70px 0;
+    }
+    .message_wrap{
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 45px;
+    }
+    .flip{
+        width: 310px;
+        height: 150px;
+    }
+    .message_card{
+        width: 297px;
+        height: 138px;
+    }
+    .map_wrapper{
+        width: 80%;
+    }
+}
+@media screen and (max-width:800px){
+    .speech_bubble_right{
+        width: 165px;
+        margin: 160px 0 0 440px;
+    }
+    .speech_bubble_right_text{
+        top: 30px;
+        margin-left: 2px;
+        font-size: 0.8em;
+        width: 75px;
+    }
+    .message_wrap{
+        padding-left: 25px;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        background-size: 580px;
+    }
+    .timeline{
+        margin-top: 330px;
+    }
+    .logo{
+        margin: 85px 0 25px 0;
+    }
+    .logo a{
+        font-size: 2.75em;
+    }
+    .profile_wrap{
+        width: 200px;
+    }
+    .profile_img_wrap_dash_border_front{
+        height: 200px;
+    }
+    .nickname{
+        bottom: -20px;
+    }
+    .speech_bubble_right{
+        width: 160px;
+        margin: 145px 0 0 385px;
+    }
+    .speech_bubble_right_text{
+        top: 30px;
+        margin-left: 2px;
+        font-size: 0.8em;
+        width: 75px;
+    }
+    .show_how{
+        font-size: .87em;
+        margin: -10px 0 15px 15px;
+    }
+    .message_wrap{
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 45px;
+    }
+    .flip{
+        width: 270px;
+        height: 165px;
+    }
+    .message_card{
+        width: 256px;
+        height: 151px;
+    }
+}
+@media screen and (max-width:700px){
+    .message_wrap{
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width:680px){
+    body{
+        background-size: 570px;
+    }
+    .timeline{
+        margin-top: 220px;
+    }
+    .message_wrap{
+        padding-left: 10px;
+    }
+    .logo{
+        margin: 85px 0 25px 0;
+    }
+    .speech_bubble_right{
+        width: 150px;
+        margin: 145px 0 0 350px;
+    }
+    .speech_bubble_right_text{
+        top: 26px;
+        margin-left: 2px;
+        font-size: 0.8em;
+        width: 75px;
+    }
+    .content{
+        margin: 70px 0 70px 0;
+    }
+    .message_wrap{
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 220px;
+    }
+    .flip{
+        width: 320px;
+        height: 160px;
+    }
+    .message_card{
+        width: 305px;
+        height: 147px;
+    }
+}
+@media screen and (max-width:600px){
+    body{
+        background-size: 560px;
+    }
+    .header_info_wrap{
+        margin-top: -10px;
+    }
+    .speech_bubble_right{
+        width: 150px;
+        margin: 145px 0 0 310px;
+    }
+    .show_how{
+        margin: -5px 0 15px 15px;
+    }
+    .message_wrap{
+        padding-left: 145px;
+    }
+}
+@media screen and (max-width:540px){
+    .speech_bubble_right{
+        width: 150px;
+        margin: 145px 0 0 280px;
+    }
+    .content{
+        margin: 60px 0 70px 0;
+    }
+    .show_how{
+        margin: 0px 0 15px 15px;
+    }
+    .message_wrap{
+        padding-left: 100px;
+    }
+}
+@media screen and (max-width:510px){
+    body{
+        background-size: 550px;
+    }
+    .speech_bubble_right{
+        width: 140px;
+        margin: 145px 0 0 250px;
+    }
+    .speech_bubble_right_text{
+        top: 23px;
+        margin-left: 2px;
+        font-size: 0.785em;
+        width: 75px;
+    }
+}
+@media screen and (max-width:480px){
+    body{
+        background-size: 530px;
+    }
+    .body_wrap{
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .menu_icon_wrapper_bg{
+        display: block;
+    }
+    .mobile_menu{
+        display: block;
+        z-index: 1;
+    }
+    .close_btn_wrap{
+        display: block;
+    }
+    .address{
+        position: absolute;
+        right: 10px;
+    }
+    .show_how{
+        margin: 3px 0 15px 15px;
+    }
+    .set_timeline{
+        position: fixed;
+        float: left;
+        left: 50%;
+        transform: translatex(-85%);
+        opacity: 0;
+        height: 100%;
+        transition: all .5s ease-in-out;
+    }
+    .timeline_wrap{
+        position: fxied;
+        float: left;
+        width: 150px;
+        height: 100%;
+        background-color: rgba(72, 18, 0, .75);
+    }
+    .y2023_month, .y2022_month{
+        margin-bottom: 5px;
+    }
+    .y2023_month.show{
+        margin-bottom: 10px;
+    }
+    .y2022_month.show{
+        margin-bottom: 42px;
+    }
+    .y2023_month li, .y2022_month li, .y2021_month li{
+        margin-bottom: 10px;
+    }
+    .y2023, .y2022, .y2021{
+        font-size: 2em;
+    }
+    .y2023_month li a, .y2022_month li a, .y2021_month li a{
+        font-size: 1.25em;
+    }
+    .speech_bubble_right{
+        width: 140px;
+        margin: 147px 0 0 295px;
+    }
+    .content{
+        margin: 60px 0 70px 0;
+    }
+    .message_wrap{
+        padding-left: 115px;
+    }
+    .flip{
+        width: 350px;
+        height: 165px;
+    }
+    .message_card{
+        width: 331px;
+        height: 147px;
+    }
+     .map_wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width:440px){
+    .message_wrap{
+        padding-left: 70px;
+    }
+    .speech_bubble_right{
+        width: 140px;
+        margin: 147px 0 0 280px;
+    }
+}
+@media screen and (max-width:400px){
+    body{
+        background-size: 500px;
+    }
+    .speech_bubble_right{
+        width: 140px;
+        margin: 145px 0 0 250px;
+    }
+    .show_how{
+        margin: 5px 0 15px 15px;
+    }
+    .flip{
+        width: 320px;
+        height: 160px;
+    }
+    .message_card{
+        width: 305px;
+        height: 147px;
+    }
+}
+@media screen and (max-width:370px){
+    .logo{
+        margin: 80px 0 20px 0;
+    }
+    .logo a{
+        font-size: 2.7em;
+    }
+    .mobile_menu{
+        width: 40px;
+    }
+    .header_info_wrap{
+        margin-bottom: 7px;
+    }
+    .profile_wrap{
+        width: 185px;
+    }
+    .profile_img_wrap_dash_border_front{
+        height: 185px;
+    }
+    .nickname{
+        bottom: -5px;
+    }
+    .speech_bubble_right{
+        width: 130px;
+        margin: 147px 0 0 230px;
+    }
+    .speech_bubble_right_text{
+        top: 20px;
+        margin-left: 2px;
+        font-size: 0.75em;
+        width: 70px;
+    }
+    .show_how{
+        font-size: .85em;
+        margin: 10px 0 13px 15px;
+    }
+    .flip{
+        width: 310px;
+        height: 150px;
+    }
+    .message_card{
+        width: 295px;
+        height: 137px;
+    }
+    .message_wrap{
+        padding-left: 34px;
+    }
+}
