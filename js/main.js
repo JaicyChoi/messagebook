@@ -1,13 +1,17 @@
 const body = document.querySelector('body');
+const view_2025 = document.querySelector('.view_2025');
 const view_2023 = document.querySelector('.view_2023');
 const view_2022 = document.querySelector('.view_2022');
 const view_2021 = document.querySelector('.view_2021');
+const y2025 = document.querySelector('.y2025');
 const y2023 = document.querySelector('.y2023');
 const y2022 = document.querySelector('.y2022');
 const y2021 = document.querySelector('.y2021');
+const y2025_month = document.querySelector('.y2025_month');
 const y2023_month = document.querySelector('.y2023_month');
 const y2022_month = document.querySelector('.y2022_month');
 const y2021_month = document.querySelector('.y2021_month');
+const y2025_month_li = document.querySelectorAll('.y2025_month>li');
 const y2023_month_li = document.querySelectorAll('.y2023_month>li');
 const y2022_month_li = document.querySelectorAll('.y2022_month>li');
 const y2021_month_li = document.querySelectorAll('.y2021_month>li');
@@ -30,15 +34,17 @@ button.addEventListener('click', () => {
 });
 
 //search index of month, year
-let current_year = '2023';
+let current_year = '2025';
 let current_list = 'latest';
-let current_month = '11';
+let current_month = '2';
 let current_index = null;
 let year = null;
 let BACKUP_visitor = null;
 let BACKUP_owner = null;
 let BACKUP_visitor_cnt = 0;
 
+//show 2025 year messages
+y2025_month_li.forEach((li, index) => click_message(li,index));
 //show 2023 year messages
 y2023_month_li.forEach((li, index) => click_message(li,index));
 //show 2022 year messages
@@ -90,10 +96,15 @@ show_timeline(year, current_index);
 latest.classList.add('show');
 
 function show_timeline(year, index){
+    y2025_month_li.forEach( li => { li.children[0].classList.remove('show')});
     y2023_month_li.forEach( li => { li.children[0].classList.remove('show')});
     y2022_month_li.forEach( li => { li.children[0].classList.remove('show')});
     y2021_month_li.forEach( li => { li.children[0].classList.remove('show')});
-    if( year === '2023' ){
+    if( year === '2025' ){
+        y2025_month.classList.add('show');
+        y2025_month_li[index].children[0].classList.add('show');
+    }
+    else if( year === '2023' ){
         y2023_month.classList.add('show');
         y2023_month_li[index].children[0].classList.add('show');
     }
@@ -108,7 +119,11 @@ function show_timeline(year, index){
 }
 
 function show_messages(year, index){
-    if( year === '2023' ){
+    if( year === '2025' ){
+        BACKUP_visitor = Y2025_visitor;
+        BACKUP_owner = Y2025_owner;
+    }
+    else if( year === '2023' ){
         BACKUP_visitor = Y2023_visitor;
         BACKUP_owner = Y2023_owner;
     }
@@ -239,16 +254,30 @@ function remove_timeline(){
 }
 
 //timeline menu action
-y2023.addEventListener('mouseenter', () => {
-    if( year === '2022' )
+y2025.addEventListener('mouseenter', () => {
+    if( year === '2023' )
         y2023_month.classList.remove('show');
+    else if( year === '2022' )
+        y2022_month.classList.remove('show');
+    else if( year === '2021' )
+        y2021_month.classList.remove('show');
+
+    y2025_month.classList.add('show');
+});
+y2023.addEventListener('mouseenter', () => {
+    if( year === '2025' )
+        y2025_month.classList.remove('show');
+    else if( year === '2022' )
+        y2022_month.classList.remove('show');
     else if( year === '2021' )
         y2021_month.classList.remove('show');
 
     y2023_month.classList.add('show');
 });
 y2022.addEventListener('mouseenter', () => {
-    if( year === '2023' )
+    if( year === '2025' )
+        y2025_month.classList.remove('show');
+    else if( year === '2023' )
         y2023_month.classList.remove('show');
     else if( year === '2021' )
         y2021_month.classList.remove('show');
@@ -256,7 +285,9 @@ y2022.addEventListener('mouseenter', () => {
     y2022_month.classList.add('show');
 });
 y2021.addEventListener('mouseenter', () => {
-    if( year === '2023' )
+    if( year === '2025' )
+        y2025_month.classList.remove('show');
+    else if( year === '2023' )
         y2023_month.classList.remove('show');
     else if( year === '2022' )
         y2022_month.classList.remove('show');
@@ -264,23 +295,59 @@ y2021.addEventListener('mouseenter', () => {
     y2021_month.classList.add('show');
 });
 
-view_2023.addEventListener('mouseleave', () => {
-    y2023_month.classList.add('show');
+view_2025.addEventListener('mouseleave', () => {
+    y2025_month.classList.add('show');
+    y2023_month.classList.remove('show');
     y2022_month.classList.remove('show');
     y2021_month.classList.remove('show');
 
     if( year === '2021' ){
+        y2025_month.classList.remove('show');
         y2023_month.classList.remove('show');
         y2022_month.classList.remove('show');
         y2021_month.classList.add('show');
     }
     else if( year === '2022' ){
+        y2025_month.classList.remove('show');
         y2023_month.classList.remove('show');
         y2022_month.classList.add('show');
         y2021_month.classList.remove('show');
     }
+    else if( year === '2023' ){
+        y2025_month.classList.remove('show')
+        y2023_month.classList.add('show')
+        y2022_month.classList.remove('show');
+        y2021_month.classList.remove('show');
+    }
+});
+
+view_2023.addEventListener('mouseleave', () => {
+    y2025_month.classList.remove('show');
+    y2023_month.classList.add('show');
+    y2022_month.classList.remove('show');
+    y2021_month.classList.remove('show');
+
+    if( year === '2021' ){
+        y2025_month.classList.remove('show');
+        y2023_month.classList.remove('show');
+        y2022_month.classList.remove('show');
+        y2021_month.classList.add('show');
+    }
+    else if( year === '2022' ){
+        y2025_month.classList.remove('show');
+        y2023_month.classList.remove('show');
+        y2022_month.classList.add('show');
+        y2021_month.classList.remove('show');
+    }
+    else if( year === '2025' ){
+        y2025_month.classList.add('show')
+        y2023_month.classList.remove('show')
+        y2022_month.classList.remove('show');
+        y2021_month.classList.remove('show');
+    }
 });
 view_2022.addEventListener('mouseleave', () => {
+    y2025_month.classList.remove('show');
     y2023_month.classList.remove('show');
     y2022_month.classList.add('show');
     y2021_month.classList.remove('show');
@@ -294,9 +361,16 @@ view_2022.addEventListener('mouseleave', () => {
         y2023_month.classList.add('show');
         y2022_month.classList.remove('show');
         y2021_month.classList.remove('show');
+    }
+    else if( year === '2025' ){
+        y2025_month.classList.add('show')
+        y2023_month.classList.remove('show')
+        y2022_month.classList.remove('show');
+        y2021_month.classList.remove('show');
     }  
 });
 view_2021.addEventListener('mouseleave', () => {
+    y2023_month.classList.remove('show')
     y2023_month.classList.remove('show');
     y2022_month.classList.remove('show');
     y2021_month.classList.add('show');
@@ -311,6 +385,12 @@ view_2021.addEventListener('mouseleave', () => {
         y2022_month.classList.add('show');
         y2023_month.classList.remove('show');
     }
+    else if( year === '2025' ){
+        y2025_month.classList.add('show')
+        y2023_month.classList.remove('show')
+        y2022_month.classList.remove('show');
+        y2021_month.classList.remove('show');
+    }  
 });
 
 //mobile menu controll

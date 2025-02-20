@@ -112,12 +112,12 @@ body::-webkit-scrollbar{
     width: 70%;
     transform: translateX(-50%);
 }
-.view_2023, .view_2022, .view_2021{
+.view_2025, .view_2023, .view_2022, .view_2021{
     position: relative;
     float: left;
     width: 100%;
 }
-.y2023, .y2022, .y2021{
+.y2025, .y2023, .y2022, .y2021{
     position: relative;
     float: left;
     color: #FFB72D;
@@ -128,10 +128,10 @@ body::-webkit-scrollbar{
     z-index: 1;
     cursor: url(../images/icon/cursor_pointer.png), auto;
 }
-.y2023:hover, .y2022:hover, .y2021:hover{
+.y2025:hover, .y2023:hover, .y2022:hover, .y2021:hover{
     text-shadow: 0 0 10px rgba(255, 183, 45, .75), 0 0 5px rgba(255, 183, 45, .5), 0 0 3px rgba(255, 183, 45, .35);
 }
-.y2023_month, .y2022_month, .y2021_month{
+.y2025_month, .y2023_month, .y2022_month, .y2021_month{
     position: relative;
     float: right;
     width: 100%;
@@ -139,11 +139,11 @@ body::-webkit-scrollbar{
     height: 0;
     transition: all .5s ease-in-out;
 }
-.y2023_month.show{
+.y2025_month.show{
     opacity: 1;
-    height: calc(36px*10);
+    height: 36px;
 }
-.y2022_month.show, .y2021_month.show{
+.y2023_month.show, .y2022_month.show, .y2021_month.show{
     opacity: 1;
     height: calc(36px*10);
 }
@@ -151,13 +151,13 @@ body::-webkit-scrollbar{
     opacity: 1;
     height: calc(36px*8);
 }
-.y2023_month li, .y2022_month li, .y2021_month li{
+.y2025_month li, .y2023_month li, .y2022_month li, .y2021_month li{
     margin-bottom: 7px;
 }
 .y2022_month li:last-child, .y2021_month li:last-child{
     margin-bottom: 0;
 }
-.y2023_month li a, .y2022_month li a, .y2021_month li a{
+.y2025_month li a, .y2023_month li a, .y2022_month li a, .y2021_month li a{
     color: #ffdb95;
     text-decoration: none;
     font-size: 1.125em;
@@ -166,11 +166,11 @@ body::-webkit-scrollbar{
     padding: 5px;
     cursor: url(../images/icon/cursor_pointer.png), auto;
 }
-.y2023_month li a:hover, .y2022_month li a:hover, .y2021_month li a:hover, .y2023_month li a.show, .y2022_month li a.show, .y2021_month li a.show{
+.y2025_month li a:hover, .y2023_month li a:hover, .y2022_month li a:hover, .y2021_month li a:hover,.y2025_month li a.show, .y2023_month li a.show, .y2022_month li a.show, .y2021_month li a.show{
     font-weight: 700;
     text-shadow: 0 0 10px rgba(255, 219, 149, .75), 0 0 5px rgba(255, 219, 149, .5);
 }
-.y2023_month li a:hover:before, .y2022_month li a:hover:before, .y2021_month li a:hover:before{
+.y2025_month li a:hover:before, .y2023_month li a:hover:before, .y2022_month li a:hover:before, .y2021_month li a:hover:before{
     content: '▶ '
 }
 .close_btn_wrap{

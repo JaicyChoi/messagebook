@@ -355,7 +355,7 @@
         height: 100%;
         background-color: rgba(72, 18, 0, .75);
     }
-    .y2023_month, .y2022_month{
+    .y2025_month, .y2023_month, .y2022_month{
         margin-bottom: 5px;
     }
     .y2023_month.show{
@@ -364,13 +364,13 @@
     .y2022_month.show{
         margin-bottom: 42px;
     }
-    .y2023_month li, .y2022_month li, .y2021_month li{
+    .y2025_month li, .y2023_month li, .y2022_month li, .y2021_month li{
         margin-bottom: 10px;
     }
-    .y2023, .y2022, .y2021{
+    .y2025, .y2023, .y2022, .y2021{
         font-size: 2em;
     }
-    .y2023_month li a, .y2022_month li a, .y2021_month li a{
+    .y2025_month li a, .y2023_month li a, .y2022_month li a, .y2021_month li a{
         font-size: 1.25em;
     }
     .speech_bubble_right{
