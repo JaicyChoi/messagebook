@@ -36,7 +36,7 @@ button.addEventListener('click', () => {
 //search index of month, year
 let current_year = '2025';
 let current_list = 'latest';
-let current_month = '2';
+let current_month = '4';
 let current_index = null;
 let year = null;
 let BACKUP_visitor = null;
